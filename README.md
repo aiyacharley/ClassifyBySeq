@@ -26,7 +26,7 @@ optional arguments:
                         [optional] Tolerance of mismatches. Default=1
                         
   -c CONFIGURE, --configure CONFIGURE
-                        Inquiry Sequences file, splited by tab. Like
+                        Inquiry Sequences file, splited by tab.
                         
   -v, --version         show program's version number and exit
   

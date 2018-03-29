@@ -43,7 +43,7 @@ def main():
 			pdict[rec[1][2:]] = rec[0]
 		else:
 			pdict[rec[1]] = rec[0]
-	out = csv.writer(open(outname,'wb'),delimiter='\t')
+	out = csv.writer(open("%s/%s"%(outdir,outname),'wb'),delimiter='\t')
 	num0 = 0
 	try:
 		while True:
@@ -86,23 +86,23 @@ def main():
 			misnum1 = int((1-result[1]/100)*len(result[5])+0.5)
 			misnum2 = int((1-result[2]/100)*len(result[6])+0.5)
 			if misnum1 <= mismatch and misnum2 <= mismatch:
-				out1 = open('%s_%s_R1.fastq'%(result[3],result[4]),'a')
-				out2 = open('%s_%s_R2.fastq'%(result[3],result[4]),'a')
+				out1 = open('%s/%s_%s_R1.fastq'%(outdir,result[3],result[4]),'a')
+				out2 = open('%s/%s_%s_R2.fastq'%(outdir,result[3],result[4]),'a')
 				SeqIO.write(rec1,out1,'fastq')
 				SeqIO.write(rec2,out2,'fastq')
 			elif misnum1 <= mismatch and misnum2 > mismatch:
-				out1 = open('%s_NO_R1.fastq'%(result[3]),'a')
-				out2 = open('%s_NO_R2.fastq'%(result[3]),'a')
+				out1 = open('%s/%s_NO_R1.fastq'%(outdir,result[3]),'a')
+				out2 = open('%s/%s_NO_R2.fastq'%(outdir,result[3]),'a')
 				SeqIO.write(rec1,out1,'fastq')
 				SeqIO.write(rec2,out2,'fastq')
 			elif misnum1 > mismatch and misnum2 <= mismatch:
-				out1 = open('NO_%s_R1.fastq'%(result[4]),'a')
-				out2 = open('NO_%s_R2.fastq'%(result[4]),'a')
+				out1 = open('%s/NO_%s_R1.fastq'%(outdir,result[4]),'a')
+				out2 = open('%s/NO_%s_R2.fastq'%(outdir,result[4]),'a')
 				SeqIO.write(rec1,out1,'fastq')
 				SeqIO.write(rec2,out2,'fastq')
 			else:
-				out1 = open('NO_NO_R1.fastq','a')
-				out2 = open('NO_NO_R2.fastq','a')
+				out1 = open('%s/NO_NO_R1.fastq'%(outdir),'a')
+				out2 = open('%s/NO_NO_R2.fastq'%(outdir),'a')
 				SeqIO.write(rec1,out1,'fastq')
 				SeqIO.write(rec2,out2,'fastq')
 				
@@ -113,6 +113,7 @@ if __name__=='__main__':
 	parser = argparse.ArgumentParser(prog='my - program',usage='%(prog)s [options]',description = 'Classify barcode to different samples',epilog = 'Created by WangCR')
 	parser.add_argument('-f1','--fqfile1',help='Input fastq format file R1.')
 	parser.add_argument('-f2','--fqfile2',help='Input fastq format file R2.')
+	parser.add_argument('-d','--outdir',default=".",help='Output file director')
 	parser.add_argument('-o','--outfile',help='Output tab format file, which record search results.')
 	parser.add_argument('-w','--window',type=int,default=10,help="[optional] Search Windowsize. Default=10")
 	parser.add_argument('-m','--mismatch',type=int,default=1,help="[optional] Tolerance of mismatches. Default=1")

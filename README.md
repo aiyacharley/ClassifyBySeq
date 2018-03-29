@@ -12,6 +12,8 @@ optional arguments:
 
 -f2/--fqfile2 FQFILE2 Input fastq format file R2.
 
+-d/--outdir OUTDIR Output file director
+
 -o/--outfile OUTFILE Output tab format file, which record search results.
 
 -w/--window WINDOW [optional] Search Windowsize. Default=10

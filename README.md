@@ -24,4 +24,14 @@ optional arguments:
 
 -v/--version Show program's version number and exit
 ```
+
+## conf-file format, splited by tab
+```
+A501P5  TGAACCTTAAGCAGTGGTATCAACGCAGAG
+A502P5  TGCTAAGTAAGCAGTGGTATCAACGCAGAG
+N701P3G  TAAGGCGAGGGGAAGACCGATGGGCCCTTGGTGG
+N702P3G  CGTACTAGGGGGAAGACCGATGGGCCCTTGGTGG
+...
+```
+
 Created by WangChengrui, 29th Marth,2018

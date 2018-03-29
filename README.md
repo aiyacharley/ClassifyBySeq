@@ -1,13 +1,11 @@
-ClassifyBySeq
-
-Classify barcode+primer sequence to different sample
-
-usage: python ClassifyBySeq.py [options]
+# ClassifyBySeq
 
 Description: This program is classifying barcode+primer sequence to different sample.
 
-optional arguments:
+## usage: python ClassifyBySeq.py [options]
 
+optional arguments:
+```
 -h, --help show this help message and exit
 
 -f1/--fqfile1 FQFILE1 Input fastq format file R1.
@@ -23,5 +21,5 @@ optional arguments:
 -c/--configure CONFIGURE Inquiry Sequences file, splited by tab.
 
 -v/--version Show program's version number and exit
-
+```
 Created by WangChengrui, 29th Marth,2018

@@ -1,4 +1,4 @@
-#!/zzh_gpfs/apps/python/bin/python
+#!/usr/bin/python
 from __future__ import division
 import os,sys,csv
 from Bio import SeqIO

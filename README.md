@@ -34,7 +34,9 @@ N702P3G  CGTACTAGGGGGAAGACCGATGGGCCCTTGGTGG
 ...
 ```
 ## Change Log
-** ClassifyBySeq.V1.py ** is calculate identity
-** ClassifyBySeq.V2.py ** is calculate mismatch number
+```
+**ClassifyBySeq.V1.py** is calculate identity
+**ClassifyBySeq.V2.py** is calculate mismatch number
+```
 
 Created by WangChengrui, 29th Marth,2018

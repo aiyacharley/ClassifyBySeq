@@ -37,12 +37,7 @@ def main():
 	for rec in infseq:
 		if rec[0].startswith("#"):
 			continue
-		if rec[0].startswith("A"):
-			pdict[rec[1][2:]] = rec[0]
-		elif rec[0].startswith("N"):
-			pdict[rec[1][2:]] = rec[0]
-		else:
-			pdict[rec[1]] = rec[0]
+		pdict[rec[1]] = rec[0]
 	out = csv.writer(open("%s/%s"%(outdir,outname),'wb'),delimiter='\t')
 	num0 = 0
 	try:

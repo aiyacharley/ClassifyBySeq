@@ -1,9 +1,10 @@
 # ClassifyBySeq
 Classify barcode+primer sequence to different sample
 
-usage: my - program [options] usage
+usage: python ClassifyBySeq.py [options]
 
-my - description
+Description
+This program is classifying barcode+primer sequence to different sample.
 
 optional arguments:
 

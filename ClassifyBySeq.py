@@ -110,7 +110,7 @@ def main():
 		print "Iteration Done !"
 
 if __name__=='__main__':
-	parser = argparse.ArgumentParser(prog='my - program',usage='%(prog)s [options] usage',description = 'my - description',epilog = 'my - epilog')
+	parser = argparse.ArgumentParser(prog='my - program',usage='%(prog)s [options]',description = 'Classify barcode to different samples',epilog = 'Created by WangCR')
 	parser.add_argument('-f1','--fqfile1',help='Input fastq format file R1.')
 	parser.add_argument('-f2','--fqfile2',help='Input fastq format file R2.')
 	parser.add_argument('-o','--outfile',help='Output tab format file, which record search results.')

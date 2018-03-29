@@ -6,7 +6,7 @@ Description: This program is classifying barcode+primer sequence to different sa
 
 optional arguments:
 ```
--h, --help show this help message and exit
+-h/--help show this help message and exit
 
 -f1/--fqfile1 FQFILE1 Input fastq format file R1.
 
